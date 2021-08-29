@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Generator from './components/Generator';
+import Halloween from './components/Halloween';
+import Nav from './components/Nav';
+import { HalloweenProvider } from './HalloweenData';
 
 function App() {
   return (
+    <HalloweenProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>This is Halloween</h1>
+      <Generator />
+      <Halloween />
+      <Nav />
     </div>
+    </HalloweenProvider>
   );
 }
 
