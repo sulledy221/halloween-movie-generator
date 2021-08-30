@@ -2,13 +2,22 @@ import { useContext } from "react"
 import Generator from "./Generator"
 import { HalloweenData } from "../HalloweenData"
 
-export default function Halloween () {
-  const [ movies, setMovies ] = useContext(HalloweenData)
+import { useState } from "react";
+import "../App.css";
+
+export default function Halloween({ halloweenItems, type }) {
+const [ choice, setChoice ] = useState("")
+const randomChoice = () => {
+  const calculator = Math.floor(Math.random() * halloweenItems.length);
+  return setChoice(halloweenItems[calculator].value);
+}
+
   return (
     <div>
-      {movies.map(movie => (
-        <Generator name={movie.name} location={movie.location} year={movie.year} key={movie.id}/>
-      ))}
+      <button onClick={randomChoice} className="button-size">
+        {type}
+      </button>
+      {choice}
     </div>
-  )
+  );
 }

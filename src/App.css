@@ -1,5 +1,21 @@
 * {
   background-color: black;
   color: orange;
+  justify-content: center;
 }
 
+.button-size{
+  font-size: 40px;
+  display: flex;
+  margin-top: 55px;
+  background-color: rgb(65, 64, 64);
+}
+
+.App{
+  font-size: 35px;
+  justify-content: center;
+}
+
+.movie-text{
+  color:darkgrey;
+}
