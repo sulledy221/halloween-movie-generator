@@ -1,7 +1,3 @@
-import { useContext } from "react"
-import Generator from "./Generator"
-import { HalloweenData } from "../HalloweenData"
-
 import { useState } from "react";
 import "../App.css";
 
@@ -11,7 +7,6 @@ const randomChoice = () => {
   const calculator = Math.floor(Math.random() * halloweenItems.length);
   return setChoice(halloweenItems[calculator].value);
 }
-
   return (
     <div>
       <button onClick={randomChoice} className="button-size">
